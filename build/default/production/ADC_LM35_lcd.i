@@ -12,7 +12,6 @@
 
 
 
-
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5629,7 +5628,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 7 "ADC_LM35_lcd.c" 2
+# 6 "ADC_LM35_lcd.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5769,7 +5768,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 8 "ADC_LM35_lcd.c" 2
+# 7 "ADC_LM35_lcd.c" 2
 
 
 # 1 "./lcd.intermed.h" 1
@@ -5869,23 +5868,23 @@ dado_lcd(frase[indice]);
 indice++;
     }
 }
-# 10 "ADC_LM35_lcd.c" 2
+# 9 "ADC_LM35_lcd.c" 2
 
 
 #pragma config FOSC = HS
 #pragma config WDT = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 
-int contador, tempdisp;
+int contador, tempdisp, contadorInt;
 char temperature[8];
-
-float temperatura, tensao;
-
+float temperatura;
+float tensao, velocidadeCooler;
+int temperaturaMax = 60;
+int temperaturaMin = 43;
 
 void setupADC(void) {
 
     TRISA = 0b00000111;
-
     ADCON1 = 0b00001100;
 
     ADCON2bits.ADCS = 0b110;
@@ -5897,13 +5896,48 @@ void setupADC(void) {
     ADCON0bits.ADON = 1;
 }
 
+void controlaVelocidade(){
+    if(temperatura < 50){
+        CCPR1L = CCPR1L - 30;
+    }
+
+    if(temperatura > 60){
+        CCPR1L = CCPR1L + 80;
+    } else if(temperatura >= 55){
+        CCPR1L = CCPR1L + 5;
+    }
+}
+void alarmeTemperatura(){
+    if(temperatura > temperaturaMax){
+        limpa_lcd( );
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        comando_lcd(128);
+        imprime_lcd("PERIGO ALTA");
+        comando_lcd(192);
+        imprime_lcd("TEMPERATURA");
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        limpa_lcd( );
+    }
+    if(temperatura < temperaturaMin){
+        limpa_lcd( );
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        comando_lcd(128);
+        imprime_lcd("PERIGO BAIXA");
+        comando_lcd(192);
+        imprime_lcd("TEMPERATURA");
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        limpa_lcd( );
+    }
+}
+
 void __attribute__((picinterrupt(("")))) isr(void){
 
     if(INTCON3bits.INT1IF == 1) {
 
         INTCON3bits.INT1IF = 0;
-
-        tensao = 1;
+        if(temperatura >= 20){
+            temperatura = temperatura - 10;
+        }
     }
 
     if(INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
@@ -5911,9 +5945,12 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
 
 
-        if(temperatura >= 50 || temperatura <= 30){
-
+        contadorInt++;
+        if(contadorInt>=8){
+            controlaVelocidade();
+            contadorInt=0;
         }
+        alarmeTemperatura();
 
   TMR0L = 5;
         INTCONbits.TMR0IF = 0;
@@ -5922,23 +5959,39 @@ void __attribute__((picinterrupt(("")))) isr(void){
 }
 
 void main(void) {
+    temperatura = 48;
+    PORTAbits.RA4 = 0;
 
-     TRISD = 0b00000000;
-     TRISE = 0b00000000;
-     TRISC = 0b00000000;
-     PORTC = 0b00100100;
+    INTCONbits.GIE =1;
+    INTCONbits.TMR0IE = 1;
+    T0CON = 0B11000111;
+    TMR0L = 5;
 
+    TRISD = 0b00000000;
+    TRISE = 0b00000000;
+    TRISC = 0b00000000;
+    PORTC = 0b00100100;
+    ADCON1 = 15;
 
-     setupADC();
+    setupADC();
 
-     ADCON1 = 15;
+    TMR2 = 0x00;
+    PR2 = 250;
+    CCP1CON = 0b00001100;
+    CCPR1L = 240;
+    TMR2IF = 0;
+    TRISCbits.RC2 = 0;
+    T2CON = 0b00000100;
 
-        comando_lcd(0b00111100);
-        comando_lcd(0b00001100);
-        limpa_lcd( );
+    INTCON3bits.INT1IE = 1;
+    INTCON3bits.INT1IF = 0;
+    INTCON2bits.INTEDG1 = 1;
+
+    comando_lcd(0b00111100);
+    comando_lcd(0b00001100);
+    limpa_lcd( );
 
 while(1) {
-
 
         ADCON1 = 0b00001100;
 
@@ -5953,24 +6006,14 @@ while(1) {
         _delay((unsigned long)((1000)*(4000000/4000.0)));
 
         TRISD = 0;
-
-
-
-
-
-
-
         comando_lcd(128);
-        imprime_lcd("temperatura");
+        imprime_lcd("Temperatura");
 
         comando_lcd(192);
         sprintf(temperature, "%3.2f", temperatura);
 
         imprime_lcd(temperature);
-
-         imprime_lcd(" graus Celsius");
-
-
+        imprime_lcd(" Graus Celsius");
  }
 
     return;

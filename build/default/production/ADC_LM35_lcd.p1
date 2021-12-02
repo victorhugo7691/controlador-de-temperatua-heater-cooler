@@ -99,6 +99,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6710
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6710: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
 [v _ADCON0bits `VS272 ~T0 @X0 0 e@4034 ]
+"6496
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6496: extern volatile unsigned char CCPR1L __attribute__((address(0xFBE)));
+[v _CCPR1L `Vuc ~T0 @X0 0 e@4030 ]
 [t ~ __interrupt . k ]
 [t T36 __interrupt ]
 "8419
@@ -139,6 +142,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8146: extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
 [v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
 [p mainexit ]
+"2320
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2320:     struct {
+[s S101 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S101 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 ]
+"2329
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2329:     struct {
+[s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S102 . AN0 AN1 AN2 AN3 T0CKI AN4 OSC2 ]
+"2338
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2338:     struct {
+[s S103 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S103 . . VREFM VREFP . LVDIN ]
+"2345
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2345:     struct {
+[s S104 :5 `uc 1 :1 `uc 1 ]
+[n S104 . . HLVDIN ]
+"2349
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2349:     struct {
+[s S105 :1 `uc 1 ]
+[n S105 . ULPWUIN ]
+"2319
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2319: typedef union {
+[u S100 `S101 1 `S102 1 `S103 1 `S104 1 `S105 1 ]
+[n S100 . . . . . . ]
+"2353
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2353: extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
+[v _PORTAbits `VS100 ~T0 @X0 0 e@3968 ]
+"8069
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8069: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
 "4001
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4001: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
@@ -151,6 +184,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2563
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 2563: extern volatile unsigned char PORTC __attribute__((address(0xF82)));
 [v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
+"7408
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7408: extern volatile unsigned char TMR2 __attribute__((address(0xFCC)));
+[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
+"7298
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7298: extern volatile unsigned char PR2 __attribute__((address(0xFCB)));
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"6327
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6327: extern volatile unsigned char CCP1CON __attribute__((address(0xFBD)));
+[v _CCP1CON `Vuc ~T0 @X0 0 e@4029 ]
+"10842
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10842: extern volatile __bit TMR2IF __attribute__((address(0x7CF1)));
+[v _TMR2IF `Vb ~T0 @X0 0 e@31985 ]
+"3858
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3858:     struct {
+[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
+"3866
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3866:     struct {
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
+"3857
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3857: typedef union {
+[u S153 `S154 1 `S155 1 ]
+[n S153 . . . ]
+"3875
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3875: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
+"7200
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7200: extern volatile unsigned char T2CON __attribute__((address(0xFCA)));
+[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
+"8511
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8511:     struct {
+[s S356 :7 `uc 1 :1 `uc 1 ]
+[n S356 . . NOT_RBPU ]
+"8515
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8515:     struct {
+[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
+"8525
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8525:     struct {
+[s S358 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S358 . . T0IP . RBPU ]
+"8510
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8510: typedef union {
+[u S355 `S356 1 `S357 1 `S358 1 ]
+[n S355 . . . . ]
+"8532
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8532: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
+[v _INTCON2bits `VS355 ~T0 @X0 0 e@4081 ]
 "6799
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6799: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
@@ -794,205 +876,408 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./lcd.intermed.h: 40: }
 [e :UE 373 ]
 }
-"12 ADC_LM35_lcd.c
-[; ;ADC_LM35_lcd.c: 12:     ADCON2bits.ADCS = 0b110;
+"11 ADC_LM35_lcd.c
+[; ;ADC_LM35_lcd.c: 11: 
 [p x FOSC  =  HS         ]
+"12
+[; ;ADC_LM35_lcd.c: 12:     ADCON2bits.ADCS = 0b110;
+[p x WDT  =  OFF         ]
 "13
 [; ;ADC_LM35_lcd.c: 13:     ADCON2bits.ACQT = 0b100;
-[p x WDT  =  OFF         ]
-"14
-[; ;ADC_LM35_lcd.c: 14:     ADCON2bits.ADFM = 0b1;
-[p x MCLRE  =  OFF       ]
-"16
-[; ;ADC_LM35_lcd.c: 16:     ADCON0 = 0;
+[p x MCLRE  =  ON       ]
+"15
+[; ;ADC_LM35_lcd.c: 15: 
 [v _contador `i ~T0 @X0 1 e ]
 [v _tempdisp `i ~T0 @X0 1 e ]
+[v _contadorInt `i ~T0 @X0 1 e ]
+"16
+[; ;ADC_LM35_lcd.c: 16:     ADCON0 = 0;
+[v _temperature `uc ~T0 @X0 -> 8 `i e ]
 "17
 [; ;ADC_LM35_lcd.c: 17:     ADCON0bits.CHS = 0b0010;
-[v _temperature `uc ~T0 @X0 -> 8 `i e ]
+[v _temperatura `f ~T0 @X0 1 e ]
+"18
+[; ;ADC_LM35_lcd.c: 18:     ADCON0bits.ADON = 1;
+[v _tensao `f ~T0 @X0 1 e ]
+[v _velocidadeCooler `f ~T0 @X0 1 e ]
 "19
 [; ;ADC_LM35_lcd.c: 19: }
-[v _temperatura `f ~T0 @X0 1 e ]
-[v _tensao `f ~T0 @X0 1 e ]
+[v _temperaturaMax `i ~T0 @X0 1 e ]
+[i _temperaturaMax
+-> 60 `i
+]
+"20
+[; ;ADC_LM35_lcd.c: 20: 
+[v _temperaturaMin `i ~T0 @X0 1 e ]
+[i _temperaturaMin
+-> 43 `i
+]
 "22
-[; ;ADC_LM35_lcd.c: 22: 
+[; ;ADC_LM35_lcd.c: 22:     if(temperatura < 50){
 [v _setupADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _setupADC ]
 [f ]
 "24
-[; ;ADC_LM35_lcd.c: 24: 
+[; ;ADC_LM35_lcd.c: 24:     }
 [e = _TRISA -> -> 7 `i `uc ]
-"26
-[; ;ADC_LM35_lcd.c: 26: 
+"25
+[; ;ADC_LM35_lcd.c: 25: 
 [e = _ADCON1 -> -> 12 `i `uc ]
-"28
-[; ;ADC_LM35_lcd.c: 28:     }
+"27
+[; ;ADC_LM35_lcd.c: 27:         CCPR1L = CCPR1L + 80;
 [e = . . _ADCON2bits 0 0 -> -> 6 `i `uc ]
-"29
-[; ;ADC_LM35_lcd.c: 29: 
+"28
+[; ;ADC_LM35_lcd.c: 28:     } else if(temperatura >= 55){
 [e = . . _ADCON2bits 0 1 -> -> 4 `i `uc ]
-"30
-[; ;ADC_LM35_lcd.c: 30:     if(INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
+"29
+[; ;ADC_LM35_lcd.c: 29:         CCPR1L = CCPR1L + 5;
 [e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
-"32
-[; ;ADC_LM35_lcd.c: 32: 
+"31
+[; ;ADC_LM35_lcd.c: 31: }
 [e = _ADCON0 -> -> 0 `i `uc ]
-"33
-[; ;ADC_LM35_lcd.c: 33: 
+"32
+[; ;ADC_LM35_lcd.c: 32: void alarmeTemperatura(){
 [e = . . _ADCON0bits 1 2 -> -> 2 `i `uc ]
-"34
-[; ;ADC_LM35_lcd.c: 34: 
+"33
+[; ;ADC_LM35_lcd.c: 33:     if(temperatura > temperaturaMax){
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"35
-[; ;ADC_LM35_lcd.c: 35:         if(temperatura >= 50 || temperatura <= 30){
+"34
+[; ;ADC_LM35_lcd.c: 34:         limpa_lcd( );
 [e :UE 377 ]
 }
-[v $root$_isr `(v ~T0 @X0 0 e ]
+"36
+[; ;ADC_LM35_lcd.c: 36:         comando_lcd(128);
+[v _controlaVelocidade `(v ~T0 @X0 1 ef ]
+{
+[e :U _controlaVelocidade ]
+[f ]
 "37
-[; ;ADC_LM35_lcd.c: 37:         }
+[; ;ADC_LM35_lcd.c: 37:         imprime_lcd("PERIGO ALTA");
+[e $ ! < _temperatura -> -> 50 `i `f 379  ]
+{
+"38
+[; ;ADC_LM35_lcd.c: 38:         comando_lcd(192);
+[e = _CCPR1L -> - -> _CCPR1L `i -> 30 `i `uc ]
+"39
+[; ;ADC_LM35_lcd.c: 39:         imprime_lcd("TEMPERATURA");
+}
+[e :U 379 ]
+"41
+[; ;ADC_LM35_lcd.c: 41:         limpa_lcd( );
+[e $ ! > _temperatura -> -> 60 `i `f 380  ]
+{
+"42
+[; ;ADC_LM35_lcd.c: 42:     }
+[e = _CCPR1L -> + -> _CCPR1L `i -> 80 `i `uc ]
+"43
+[; ;ADC_LM35_lcd.c: 43:     if(temperatura < temperaturaMin){
+}
+[e $U 381  ]
+[e :U 380 ]
+[e $ ! >= _temperatura -> -> 55 `i `f 382  ]
+{
+"44
+[; ;ADC_LM35_lcd.c: 44:         limpa_lcd( );
+[e = _CCPR1L -> + -> _CCPR1L `i -> 5 `i `uc ]
+"45
+[; ;ADC_LM35_lcd.c: 45:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+}
+[e :U 382 ]
+[e :U 381 ]
+"46
+[; ;ADC_LM35_lcd.c: 46:         comando_lcd(128);
+[e :UE 378 ]
+}
+"47
+[; ;ADC_LM35_lcd.c: 47:         imprime_lcd("PERIGO BAIXA");
+[v _alarmeTemperatura `(v ~T0 @X0 1 ef ]
+{
+[e :U _alarmeTemperatura ]
+[f ]
+"48
+[; ;ADC_LM35_lcd.c: 48:         comando_lcd(192);
+[e $ ! > _temperatura -> _temperaturaMax `f 384  ]
+{
+"49
+[; ;ADC_LM35_lcd.c: 49:         imprime_lcd("TEMPERATURA");
+[e ( _limpa_lcd ..  ]
+"50
+[; ;ADC_LM35_lcd.c: 50:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"51
+[; ;ADC_LM35_lcd.c: 51:         limpa_lcd( );
+[e ( _comando_lcd (1 -> -> 128 `i `ui ]
+"52
+[; ;ADC_LM35_lcd.c: 52:     }
+[e ( _imprime_lcd (1 :s 1C ]
+"53
+[; ;ADC_LM35_lcd.c: 53: }
+[e ( _comando_lcd (1 -> -> 192 `i `ui ]
+"54
+[; ;ADC_LM35_lcd.c: 54: 
+[e ( _imprime_lcd (1 :s 2C ]
+"55
+[; ;ADC_LM35_lcd.c: 55: void __attribute__((picinterrupt(("")))) isr(void){
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"56
+[; ;ADC_LM35_lcd.c: 56: 
+[e ( _limpa_lcd ..  ]
+"57
+[; ;ADC_LM35_lcd.c: 57:     if(INTCON3bits.INT1IF == 1) {
+}
+[e :U 384 ]
+"58
+[; ;ADC_LM35_lcd.c: 58: 
+[e $ ! < _temperatura -> _temperaturaMin `f 385  ]
+{
+"59
+[; ;ADC_LM35_lcd.c: 59:         INTCON3bits.INT1IF = 0;
+[e ( _limpa_lcd ..  ]
+"60
+[; ;ADC_LM35_lcd.c: 60:         if(temperatura >= 20){
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"61
+[; ;ADC_LM35_lcd.c: 61:             temperatura = temperatura - 10;
+[e ( _comando_lcd (1 -> -> 128 `i `ui ]
+"62
+[; ;ADC_LM35_lcd.c: 62:         }
+[e ( _imprime_lcd (1 :s 3C ]
+"63
+[; ;ADC_LM35_lcd.c: 63:     }
+[e ( _comando_lcd (1 -> -> 192 `i `ui ]
+"64
+[; ;ADC_LM35_lcd.c: 64: 
+[e ( _imprime_lcd (1 :s 4C ]
+"65
+[; ;ADC_LM35_lcd.c: 65:     if(INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"66
+[; ;ADC_LM35_lcd.c: 66: 
+[e ( _limpa_lcd ..  ]
+"67
+[; ;ADC_LM35_lcd.c: 67: 
+}
+[e :U 385 ]
+"68
+[; ;ADC_LM35_lcd.c: 68: 
+[e :UE 383 ]
+}
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"70
+[; ;ADC_LM35_lcd.c: 70:         contadorInt++;
 [v _isr `(v ~T36 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-"39
-[; ;ADC_LM35_lcd.c: 39:   TMR0L = 5;
-[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 379  ]
+"72
+[; ;ADC_LM35_lcd.c: 72:             controlaVelocidade();
+[e $ ! == -> . . _INTCON3bits 0 0 `i -> 1 `i 387  ]
 {
-"41
-[; ;ADC_LM35_lcd.c: 41:     }
+"74
+[; ;ADC_LM35_lcd.c: 74:         }
 [e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
-"43
-[; ;ADC_LM35_lcd.c: 43: }
-[e = _tensao -> -> 1 `i `f ]
-"44
-[; ;ADC_LM35_lcd.c: 44: 
-}
-[e :U 379 ]
-"46
-[; ;ADC_LM35_lcd.c: 46: 
-[e $ ! && != -> . . _INTCONbits 0 5 `i -> 0 `i != -> . . _INTCONbits 0 2 `i -> 0 `i 380  ]
+"75
+[; ;ADC_LM35_lcd.c: 75:         alarmeTemperatura();
+[e $ ! >= _temperatura -> -> 20 `i `f 388  ]
 {
-"51
-[; ;ADC_LM35_lcd.c: 51: 
-[e $ ! || >= _temperatura -> -> 50 `i `f <= _temperatura -> -> 30 `i `f 381  ]
-{
-"53
-[; ;ADC_LM35_lcd.c: 53:      setupADC();
+"76
+[; ;ADC_LM35_lcd.c: 76: 
+[e = _temperatura - _temperatura -> -> 10 `i `f ]
+"77
+[; ;ADC_LM35_lcd.c: 77:   TMR0L = 5;
 }
-[e :U 381 ]
-"55
-[; ;ADC_LM35_lcd.c: 55:      ADCON1 = 15;
+[e :U 388 ]
+"78
+[; ;ADC_LM35_lcd.c: 78:         INTCONbits.TMR0IF = 0;
+}
+[e :U 387 ]
+"80
+[; ;ADC_LM35_lcd.c: 80: 
+[e $ ! && != -> . . _INTCONbits 0 5 `i -> 0 `i != -> . . _INTCONbits 0 2 `i -> 0 `i 389  ]
+{
+"85
+[; ;ADC_LM35_lcd.c: 85:     PORTAbits.RA4 = 0;
+[e ++ _contadorInt -> 1 `i ]
+"86
+[; ;ADC_LM35_lcd.c: 86: 
+[e $ ! >= _contadorInt -> 8 `i 390  ]
+{
+"87
+[; ;ADC_LM35_lcd.c: 87:     INTCONbits.GIE =1;
+[e ( _controlaVelocidade ..  ]
+"88
+[; ;ADC_LM35_lcd.c: 88:     INTCONbits.TMR0IE = 1;
+[e = _contadorInt -> 0 `i ]
+"89
+[; ;ADC_LM35_lcd.c: 89:     T0CON = 0B11000111;
+}
+[e :U 390 ]
+"90
+[; ;ADC_LM35_lcd.c: 90:     TMR0L = 5;
+[e ( _alarmeTemperatura ..  ]
+"92
+[; ;ADC_LM35_lcd.c: 92:     TRISD = 0b00000000;
 [e = _TMR0L -> -> 5 `i `uc ]
-"56
-[; ;ADC_LM35_lcd.c: 56: 
+"93
+[; ;ADC_LM35_lcd.c: 93:     TRISE = 0b00000000;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"57
-[; ;ADC_LM35_lcd.c: 57:         comando_lcd(0b00111100);
+"94
+[; ;ADC_LM35_lcd.c: 94:     TRISC = 0b00000000;
 }
-[e :U 380 ]
-"59
-[; ;ADC_LM35_lcd.c: 59:         limpa_lcd( );
-[e :UE 378 ]
+[e :U 389 ]
+"96
+[; ;ADC_LM35_lcd.c: 96:     ADCON1 = 15;
+[e :UE 386 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"61
-[; ;ADC_LM35_lcd.c: 61: while(1) {
+"98
+[; ;ADC_LM35_lcd.c: 98:     setupADC();
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"63
-[; ;ADC_LM35_lcd.c: 63: 
-[e = _TRISD -> -> 0 `i `uc ]
-"64
-[; ;ADC_LM35_lcd.c: 64:         ADCON1 = 0b00001100;
-[e = _TRISE -> -> 0 `i `uc ]
-"65
-[; ;ADC_LM35_lcd.c: 65: 
-[e = _TRISC -> -> 0 `i `uc ]
-"66
-[; ;ADC_LM35_lcd.c: 66:         ADCON0bits.GO = 1;
-[e = _PORTC -> -> 36 `i `uc ]
-"69
-[; ;ADC_LM35_lcd.c: 69:   contador = (ADRESH * 0x100) + ADRESL;
-[e ( _setupADC ..  ]
-"71
-[; ;ADC_LM35_lcd.c: 71:         temperatura = 100*tensao;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"73
-[; ;ADC_LM35_lcd.c: 73: 
-[e ( _comando_lcd (1 -> -> 60 `i `ui ]
-"74
-[; ;ADC_LM35_lcd.c: 74:         _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( _comando_lcd (1 -> -> 12 `i `ui ]
-"75
-[; ;ADC_LM35_lcd.c: 75: 
-[e ( _limpa_lcd ..  ]
-"77
-[; ;ADC_LM35_lcd.c: 77: 
-[e :U 384 ]
-{
-"80
-[; ;ADC_LM35_lcd.c: 80: 
-[e = _ADCON1 -> -> 12 `i `uc ]
-"82
-[; ;ADC_LM35_lcd.c: 82: 
-[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
-"83
-[; ;ADC_LM35_lcd.c: 83: 
-[e $U 386  ]
-[e :U 387 ]
-{
-"84
-[; ;ADC_LM35_lcd.c: 84:         comando_lcd(128);
-}
-[e :U 386 ]
-"83
-[; ;ADC_LM35_lcd.c: 83: 
-[e $ != -> . . _ADCON0bits 4 1 `i -> 0 `i 387  ]
-[e :U 388 ]
-"85
-[; ;ADC_LM35_lcd.c: 85:         imprime_lcd("temperatura");
-[e = _contador + * -> _ADRESH `i -> 256 `i -> _ADRESL `i ]
-"86
-[; ;ADC_LM35_lcd.c: 86: 
-[e = _tensao -> * -> * -> 5 `i _contador `d .0.001 `f ]
-"87
-[; ;ADC_LM35_lcd.c: 87:         comando_lcd(192);
-[e = _temperatura * -> -> 100 `i `f _tensao ]
-"88
-[; ;ADC_LM35_lcd.c: 88:         sprintf(temperature, "%3.2f", temperatura);
-[e = _tempdisp -> _temperatura `i ]
-"90
-[; ;ADC_LM35_lcd.c: 90:         imprime_lcd(temperature);
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"92
-[; ;ADC_LM35_lcd.c: 92:          imprime_lcd(" graus Celsius");
-[e = _TRISD -> -> 0 `i `uc ]
+"99
+[; ;ADC_LM35_lcd.c: 99: 
+[e = _temperatura -> -> 48 `i `f ]
 "100
-[e ( _comando_lcd (1 -> -> 128 `i `ui ]
-"101
-[e ( _imprime_lcd (1 :s 1C ]
+[; ;ADC_LM35_lcd.c: 100:     TMR2 = 0x00;
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+"102
+[; ;ADC_LM35_lcd.c: 102:     CCP1CON = 0b00001100;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "103
-[e ( _comando_lcd (1 -> -> 192 `i `ui ]
+[; ;ADC_LM35_lcd.c: 103:     CCPR1L = 240;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
 "104
-[e ( _sprintf (1 , (. , &U _temperature :s 2C -> _temperatura `d ]
-"106
-[e ( _imprime_lcd (1 &U _temperature ]
+[; ;ADC_LM35_lcd.c: 104:     TMR2IF = 0;
+[e = _T0CON -> -> 199 `i `uc ]
+"105
+[; ;ADC_LM35_lcd.c: 105:     TRISCbits.RC2 = 0;
+[e = _TMR0L -> -> 5 `i `uc ]
+"107
+[; ;ADC_LM35_lcd.c: 107: 
+[e = _TRISD -> -> 0 `i `uc ]
 "108
-[e ( _imprime_lcd (1 :s 3C ]
+[; ;ADC_LM35_lcd.c: 108:     INTCON3bits.INT1IE = 1;
+[e = _TRISE -> -> 0 `i `uc ]
+"109
+[; ;ADC_LM35_lcd.c: 109:     INTCON3bits.INT1IF = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+"110
+[; ;ADC_LM35_lcd.c: 110:     INTCON2bits.INTEDG1 = 1;
+[e = _PORTC -> -> 36 `i `uc ]
 "111
-}
-[e :U 383 ]
-[e $U 384  ]
-[e :U 385 ]
+[; ;ADC_LM35_lcd.c: 111: 
+[e = _ADCON1 -> -> 15 `i `uc ]
 "113
-[e $UE 382  ]
-"114
-[e :UE 382 ]
+[; ;ADC_LM35_lcd.c: 113:     comando_lcd(0b00001100);
+[e ( _setupADC ..  ]
+"115
+[; ;ADC_LM35_lcd.c: 115: 
+[e = _TMR2 -> -> 0 `i `uc ]
+"116
+[; ;ADC_LM35_lcd.c: 116: while(1) {
+[e = _PR2 -> -> 250 `i `uc ]
+"117
+[; ;ADC_LM35_lcd.c: 117: 
+[e = _CCP1CON -> -> 12 `i `uc ]
+"118
+[; ;ADC_LM35_lcd.c: 118:         ADCON1 = 0b00001100;
+[e = _CCPR1L -> -> 240 `i `uc ]
+"119
+[; ;ADC_LM35_lcd.c: 119: 
+[e = _TMR2IF -> -> 0 `i `b ]
+"120
+[; ;ADC_LM35_lcd.c: 120:         ADCON0bits.GO = 1;
+[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
+"121
+[; ;ADC_LM35_lcd.c: 121:   while (ADCON0bits.GO) {
+[e = _T2CON -> -> 4 `i `uc ]
+"123
+[; ;ADC_LM35_lcd.c: 123:   contador = (ADRESH * 0x100) + ADRESL;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"124
+[; ;ADC_LM35_lcd.c: 124:   tensao = ((5 * contador) * 0.001 );
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+"125
+[; ;ADC_LM35_lcd.c: 125:         temperatura = 100*tensao;
+[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+"127
+[; ;ADC_LM35_lcd.c: 127: 
+[e ( _comando_lcd (1 -> -> 60 `i `ui ]
+"128
+[; ;ADC_LM35_lcd.c: 128:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( _comando_lcd (1 -> -> 12 `i `ui ]
+"129
+[; ;ADC_LM35_lcd.c: 129: 
+[e ( _limpa_lcd ..  ]
+"131
+[; ;ADC_LM35_lcd.c: 131:         comando_lcd(128);
+[e :U 393 ]
+{
+"133
+[; ;ADC_LM35_lcd.c: 133: 
+[e = _ADCON1 -> -> 12 `i `uc ]
+"135
+[; ;ADC_LM35_lcd.c: 135:         sprintf(temperature, "%3.2f", temperatura);
+[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
+"136
+[; ;ADC_LM35_lcd.c: 136: 
+[e $U 395  ]
+[e :U 396 ]
+{
+"137
+[; ;ADC_LM35_lcd.c: 137:         imprime_lcd(temperature);
+}
+[e :U 395 ]
+"136
+[; ;ADC_LM35_lcd.c: 136: 
+[e $ != -> . . _ADCON0bits 4 1 `i -> 0 `i 396  ]
+[e :U 397 ]
+"138
+[; ;ADC_LM35_lcd.c: 138:         imprime_lcd(" Graus Celsius");
+[e = _contador + * -> _ADRESH `i -> 256 `i -> _ADRESL `i ]
+"139
+[; ;ADC_LM35_lcd.c: 139:  }
+[e = _tensao -> * -> * -> 5 `i _contador `d .0.001 `f ]
+"140
+[; ;ADC_LM35_lcd.c: 140: 
+[e = _temperatura * -> -> 100 `i `f _tensao ]
+"141
+[; ;ADC_LM35_lcd.c: 141:     return;
+[e = _tempdisp -> _temperatura `i ]
+"143
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"145
+[e = _TRISD -> -> 0 `i `uc ]
+"146
+[e ( _comando_lcd (1 -> -> 128 `i `ui ]
+"147
+[e ( _imprime_lcd (1 :s 5C ]
+"149
+[e ( _comando_lcd (1 -> -> 192 `i `ui ]
+"150
+[e ( _sprintf (1 , (. , &U _temperature :s 6C -> _temperatura `d ]
+"152
+[e ( _imprime_lcd (1 &U _temperature ]
+"153
+[e ( _imprime_lcd (1 :s 7C ]
+"154
+}
+[e :U 392 ]
+[e $U 393  ]
+[e :U 394 ]
+"156
+[e $UE 391  ]
+"157
+[e :UE 391 ]
 }
 [p f _sprintf 8495104 ]
-[a 3C 32 103 114 97 117 115 32 67 101 108 115 105 117 115 0 ]
-[a 2C 37 51 46 50 102 0 ]
-[a 1C 116 101 109 112 101 114 97 116 117 114 97 0 ]
+[a 7C 32 71 114 97 117 115 32 67 101 108 115 105 117 115 0 ]
+[a 6C 37 51 46 50 102 0 ]
+[a 5C 84 101 109 112 101 114 97 116 117 114 97 0 ]
+[a 3C 80 69 82 73 71 79 32 66 65 73 88 65 0 ]
+[a 1C 80 69 82 73 71 79 32 65 76 84 65 0 ]
+[a 2C 84 69 77 80 69 82 65 84 85 82 65 0 ]
+[a 4C 84 69 77 80 69 82 65 84 85 82 65 0 ]

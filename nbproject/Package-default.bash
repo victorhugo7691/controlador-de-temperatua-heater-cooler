@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/conversorADTemperatura.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=conversorADTemperatura.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=conversoradtemperatura.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/controlador-de-temperatua-heater-cooler.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=controlador-de-temperatua-heater-cooler.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=controlador-de-temperatua-heater-cooler/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/conversoradtemperatura.x/bin
+makeDirectory ${TMPDIR}/controlador-de-temperatua-heater-cooler/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/conversoradtemperatura.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/controlador-de-temperatua-heater-cooler.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/conversoradtemperatura.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/controlador-de-temperatua-heater-cooler.tar *
 checkReturnCode
 
 # Cleanup

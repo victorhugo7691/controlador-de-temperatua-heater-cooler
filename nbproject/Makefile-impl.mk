@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=conversorADTemperatura.X
+PROJECTNAME=controlador-de-temperatua-heater-cooler
 
 # Active Configuration
 DEFAULTCONF=default
