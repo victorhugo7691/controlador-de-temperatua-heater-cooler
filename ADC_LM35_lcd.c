@@ -22,7 +22,7 @@ int temperaturaMin  = 43;
 void setupADC(void) {
     
     TRISA = 0b00000111;         // Habilita pino A0-A2 como entrada
-    ADCON1 = 0b00001100;        // pinos analogicos e referência
+    ADCON1 = 0b00001100;        // pinos analogicos e referência //configuração dos pinos que serão utilizados como entrada analógica através do registrador 
     
     ADCON2bits.ADCS = 0b110;    // Clock do AD: Fosc/64
     ADCON2bits.ACQT = 0b100;    // Tempo de aquisição: 8 Tad
@@ -87,9 +87,9 @@ void __interrupt() isr(void){// Função de interrupção
             controlaVelocidade();
             contadorInt=0;
         }
-        alarmeTemperatura();
         
-		TMR0L = 5; //'recarga do timer0
+        
+		TMR0L = 7; //'recarga do timer0
         INTCONbits.TMR0IF = 0; // clear this interrupt condition
     }
             
@@ -101,13 +101,15 @@ void main(void) {
 
     INTCONbits.GIE =1; //Habilita interrupção global, bit 7 do registrador INTCON
     INTCONbits.TMR0IE = 1; //Habilita a interrupção do TMR0
-    T0CON = 0B11000111; //Configura o prescalar, o prescaler define o número de vezes que um evento deve ocorrer
-    TMR0L = 5; //16,38ms 
+    //Prescalar configurado para 1:128 O prescaler define o número de vezes que um evento deve ocorrer, antes que o registrador TMR0L seja incrementado
+    T0CON = 0B11000110; //Configura o prescalar, o prescaler define o número de vezes que um evento deve ocorrer
+    //tempo = 256x128x1 = 32,768 ms
+    TMR0L = 7;  // 1x128x(256-7) =  31,872ms 
     
     TRISD = 0b00000000;         // Habilita porta D como saída dado LCD  
     TRISE = 0b00000000;        // porta E saida controle do LCD
     TRISC = 0b00000000;
-    PORTC = 0b00100100;
+    PORTC = 0b00100100; //estados do pino da porta
     ADCON1 = 15; //pinos analogicos e referência
     
     setupADC();
@@ -151,6 +153,8 @@ while(1) {                                // Inicia loop infinito
         
         imprime_lcd(temperature);       
         imprime_lcd(" Graus Celsius");
+        __delay_ms(500); //Atraso de 1s do display
+        alarmeTemperatura();
 	}
 
     return;

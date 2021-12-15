@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\controlador-de-temperatua-heater-cooler.production.hex">
+  <executable name="dist/default/production\controlador-de-temperatura-heater-cooler.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>15888</used>
-      <free>16880</free>
+      <used>15024</used>
+      <free>17744</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>336</used>
-      <free>1712</free>
+      <used>318</used>
+      <free>1730</free>
     </memory>
   </executable>
 </project>

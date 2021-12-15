@@ -1078,14 +1078,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC_LM35_lcd.c: 74:         }
 [e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
 "75
-[; ;ADC_LM35_lcd.c: 75:         alarmeTemperatura();
+[; ;ADC_LM35_lcd.c: 75: 
 [e $ ! >= _temperatura -> -> 20 `i `f 388  ]
 {
 "76
 [; ;ADC_LM35_lcd.c: 76: 
 [e = _temperatura - _temperatura -> -> 10 `i `f ]
 "77
-[; ;ADC_LM35_lcd.c: 77:   TMR0L = 5;
+[; ;ADC_LM35_lcd.c: 77:   TMR0L = 7;
 }
 [e :U 388 ]
 "78
@@ -1110,29 +1110,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC_LM35_lcd.c: 88:     INTCONbits.TMR0IE = 1;
 [e = _contadorInt -> 0 `i ]
 "89
-[; ;ADC_LM35_lcd.c: 89:     T0CON = 0B11000111;
+[; ;ADC_LM35_lcd.c: 89: 
 }
 [e :U 390 ]
-"90
-[; ;ADC_LM35_lcd.c: 90:     TMR0L = 5;
-[e ( _alarmeTemperatura ..  ]
 "92
-[; ;ADC_LM35_lcd.c: 92:     TRISD = 0b00000000;
-[e = _TMR0L -> -> 5 `i `uc ]
+[; ;ADC_LM35_lcd.c: 92:     TMR0L = 7;
+[e = _TMR0L -> -> 7 `i `uc ]
 "93
-[; ;ADC_LM35_lcd.c: 93:     TRISE = 0b00000000;
+[; ;ADC_LM35_lcd.c: 93: 
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "94
-[; ;ADC_LM35_lcd.c: 94:     TRISC = 0b00000000;
+[; ;ADC_LM35_lcd.c: 94:     TRISD = 0b00000000;
 }
 [e :U 389 ]
 "96
-[; ;ADC_LM35_lcd.c: 96:     ADCON1 = 15;
+[; ;ADC_LM35_lcd.c: 96:     TRISC = 0b00000000;
 [e :UE 386 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "98
-[; ;ADC_LM35_lcd.c: 98:     setupADC();
+[; ;ADC_LM35_lcd.c: 98:     ADCON1 = 15;
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
@@ -1141,136 +1138,141 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC_LM35_lcd.c: 99: 
 [e = _temperatura -> -> 48 `i `f ]
 "100
-[; ;ADC_LM35_lcd.c: 100:     TMR2 = 0x00;
+[; ;ADC_LM35_lcd.c: 100:     setupADC();
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
 "102
-[; ;ADC_LM35_lcd.c: 102:     CCP1CON = 0b00001100;
+[; ;ADC_LM35_lcd.c: 102:     TMR2 = 0x00;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "103
-[; ;ADC_LM35_lcd.c: 103:     CCPR1L = 240;
+[; ;ADC_LM35_lcd.c: 103:     PR2 = 250;
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"104
-[; ;ADC_LM35_lcd.c: 104:     TMR2IF = 0;
-[e = _T0CON -> -> 199 `i `uc ]
 "105
-[; ;ADC_LM35_lcd.c: 105:     TRISCbits.RC2 = 0;
-[e = _TMR0L -> -> 5 `i `uc ]
+[; ;ADC_LM35_lcd.c: 105:     CCPR1L = 240;
+[e = _T0CON -> -> 198 `i `uc ]
 "107
-[; ;ADC_LM35_lcd.c: 107: 
-[e = _TRISD -> -> 0 `i `uc ]
-"108
-[; ;ADC_LM35_lcd.c: 108:     INTCON3bits.INT1IE = 1;
-[e = _TRISE -> -> 0 `i `uc ]
+[; ;ADC_LM35_lcd.c: 107:     TRISCbits.RC2 = 0;
+[e = _TMR0L -> -> 7 `i `uc ]
 "109
-[; ;ADC_LM35_lcd.c: 109:     INTCON3bits.INT1IF = 0;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;ADC_LM35_lcd.c: 109: 
+[e = _TRISD -> -> 0 `i `uc ]
 "110
-[; ;ADC_LM35_lcd.c: 110:     INTCON2bits.INTEDG1 = 1;
-[e = _PORTC -> -> 36 `i `uc ]
+[; ;ADC_LM35_lcd.c: 110:     INTCON3bits.INT1IE = 1;
+[e = _TRISE -> -> 0 `i `uc ]
 "111
-[; ;ADC_LM35_lcd.c: 111: 
-[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;ADC_LM35_lcd.c: 111:     INTCON3bits.INT1IF = 0;
+[e = _TRISC -> -> 0 `i `uc ]
+"112
+[; ;ADC_LM35_lcd.c: 112:     INTCON2bits.INTEDG1 = 1;
+[e = _PORTC -> -> 36 `i `uc ]
 "113
-[; ;ADC_LM35_lcd.c: 113:     comando_lcd(0b00001100);
-[e ( _setupADC ..  ]
+[; ;ADC_LM35_lcd.c: 113: 
+[e = _ADCON1 -> -> 15 `i `uc ]
 "115
-[; ;ADC_LM35_lcd.c: 115: 
-[e = _TMR2 -> -> 0 `i `uc ]
-"116
-[; ;ADC_LM35_lcd.c: 116: while(1) {
-[e = _PR2 -> -> 250 `i `uc ]
+[; ;ADC_LM35_lcd.c: 115:     comando_lcd(0b00001100);
+[e ( _setupADC ..  ]
 "117
 [; ;ADC_LM35_lcd.c: 117: 
-[e = _CCP1CON -> -> 12 `i `uc ]
+[e = _TMR2 -> -> 0 `i `uc ]
 "118
-[; ;ADC_LM35_lcd.c: 118:         ADCON1 = 0b00001100;
-[e = _CCPR1L -> -> 240 `i `uc ]
+[; ;ADC_LM35_lcd.c: 118: while(1) {
+[e = _PR2 -> -> 250 `i `uc ]
 "119
 [; ;ADC_LM35_lcd.c: 119: 
-[e = _TMR2IF -> -> 0 `i `b ]
+[e = _CCP1CON -> -> 12 `i `uc ]
 "120
-[; ;ADC_LM35_lcd.c: 120:         ADCON0bits.GO = 1;
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
+[; ;ADC_LM35_lcd.c: 120:         ADCON1 = 0b00001100;
+[e = _CCPR1L -> -> 240 `i `uc ]
 "121
-[; ;ADC_LM35_lcd.c: 121:   while (ADCON0bits.GO) {
-[e = _T2CON -> -> 4 `i `uc ]
+[; ;ADC_LM35_lcd.c: 121: 
+[e = _TMR2IF -> -> 0 `i `b ]
+"122
+[; ;ADC_LM35_lcd.c: 122:         ADCON0bits.GO = 1;
+[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
 "123
-[; ;ADC_LM35_lcd.c: 123:   contador = (ADRESH * 0x100) + ADRESL;
-[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
-"124
-[; ;ADC_LM35_lcd.c: 124:   tensao = ((5 * contador) * 0.001 );
-[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
+[; ;ADC_LM35_lcd.c: 123:   while (ADCON0bits.GO) {
+[e = _T2CON -> -> 4 `i `uc ]
 "125
-[; ;ADC_LM35_lcd.c: 125:         temperatura = 100*tensao;
-[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
+[; ;ADC_LM35_lcd.c: 125:   contador = (ADRESH * 0x100) + ADRESL;
+[e = . . _INTCON3bits 0 3 -> -> 1 `i `uc ]
+"126
+[; ;ADC_LM35_lcd.c: 126:   tensao = ((5 * contador) * 0.001 );
+[e = . . _INTCON3bits 0 0 -> -> 0 `i `uc ]
 "127
-[; ;ADC_LM35_lcd.c: 127: 
-[e ( _comando_lcd (1 -> -> 60 `i `ui ]
-"128
-[; ;ADC_LM35_lcd.c: 128:         _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( _comando_lcd (1 -> -> 12 `i `ui ]
+[; ;ADC_LM35_lcd.c: 127:         temperatura = 100*tensao;
+[e = . . _INTCON2bits 1 5 -> -> 1 `i `uc ]
 "129
 [; ;ADC_LM35_lcd.c: 129: 
-[e ( _limpa_lcd ..  ]
+[e ( _comando_lcd (1 -> -> 60 `i `ui ]
+"130
+[; ;ADC_LM35_lcd.c: 130:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( _comando_lcd (1 -> -> 12 `i `ui ]
 "131
-[; ;ADC_LM35_lcd.c: 131:         comando_lcd(128);
+[; ;ADC_LM35_lcd.c: 131: 
+[e ( _limpa_lcd ..  ]
+"133
+[; ;ADC_LM35_lcd.c: 133:         comando_lcd(128);
 [e :U 393 ]
 {
-"133
-[; ;ADC_LM35_lcd.c: 133: 
-[e = _ADCON1 -> -> 12 `i `uc ]
 "135
-[; ;ADC_LM35_lcd.c: 135:         sprintf(temperature, "%3.2f", temperatura);
+[; ;ADC_LM35_lcd.c: 135: 
+[e = _ADCON1 -> -> 12 `i `uc ]
+"137
+[; ;ADC_LM35_lcd.c: 137:         sprintf(temperature, "%3.2f", temperatura);
 [e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
-"136
-[; ;ADC_LM35_lcd.c: 136: 
+"138
+[; ;ADC_LM35_lcd.c: 138: 
 [e $U 395  ]
 [e :U 396 ]
 {
-"137
-[; ;ADC_LM35_lcd.c: 137:         imprime_lcd(temperature);
+"139
+[; ;ADC_LM35_lcd.c: 139:         imprime_lcd(temperature);
 }
 [e :U 395 ]
-"136
-[; ;ADC_LM35_lcd.c: 136: 
+"138
+[; ;ADC_LM35_lcd.c: 138: 
 [e $ != -> . . _ADCON0bits 4 1 `i -> 0 `i 396  ]
 [e :U 397 ]
-"138
-[; ;ADC_LM35_lcd.c: 138:         imprime_lcd(" Graus Celsius");
-[e = _contador + * -> _ADRESH `i -> 256 `i -> _ADRESL `i ]
-"139
-[; ;ADC_LM35_lcd.c: 139:  }
-[e = _tensao -> * -> * -> 5 `i _contador `d .0.001 `f ]
 "140
-[; ;ADC_LM35_lcd.c: 140: 
-[e = _temperatura * -> -> 100 `i `f _tensao ]
+[; ;ADC_LM35_lcd.c: 140:         imprime_lcd(" Graus Celsius");
+[e = _contador + * -> _ADRESH `i -> 256 `i -> _ADRESL `i ]
 "141
-[; ;ADC_LM35_lcd.c: 141:     return;
-[e = _tempdisp -> _temperatura `i ]
+[; ;ADC_LM35_lcd.c: 141:         _delay((unsigned long)((500)*(4000000/4000.0)));
+[e = _tensao -> * -> * -> 5 `i _contador `d .0.001 `f ]
+"142
+[; ;ADC_LM35_lcd.c: 142:         alarmeTemperatura();
+[e = _temperatura * -> -> 100 `i `f _tensao ]
 "143
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;ADC_LM35_lcd.c: 143:  }
+[e = _tempdisp -> _temperatura `i ]
 "145
-[e = _TRISD -> -> 0 `i `uc ]
-"146
-[e ( _comando_lcd (1 -> -> 128 `i `ui ]
+[; ;ADC_LM35_lcd.c: 145:     return;
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "147
-[e ( _imprime_lcd (1 :s 5C ]
+[e = _TRISD -> -> 0 `i `uc ]
+"148
+[e ( _comando_lcd (1 -> -> 128 `i `ui ]
 "149
+[e ( _imprime_lcd (1 :s 5C ]
+"151
 [e ( _comando_lcd (1 -> -> 192 `i `ui ]
-"150
-[e ( _sprintf (1 , (. , &U _temperature :s 6C -> _temperatura `d ]
 "152
-[e ( _imprime_lcd (1 &U _temperature ]
-"153
-[e ( _imprime_lcd (1 :s 7C ]
+[e ( _sprintf (1 , (. , &U _temperature :s 6C -> _temperatura `d ]
 "154
+[e ( _imprime_lcd (1 &U _temperature ]
+"155
+[e ( _imprime_lcd (1 :s 7C ]
+"156
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"157
+[e ( _alarmeTemperatura ..  ]
+"158
 }
 [e :U 392 ]
 [e $U 393  ]
 [e :U 394 ]
-"156
+"160
 [e $UE 391  ]
-"157
+"161
 [e :UE 391 ]
 }
 [p f _sprintf 8495104 ]

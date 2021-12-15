@@ -5950,9 +5950,9 @@ void __attribute__((picinterrupt(("")))) isr(void){
             controlaVelocidade();
             contadorInt=0;
         }
-        alarmeTemperatura();
 
-  TMR0L = 5;
+
+  TMR0L = 7;
         INTCONbits.TMR0IF = 0;
     }
 
@@ -5964,8 +5964,10 @@ void main(void) {
 
     INTCONbits.GIE =1;
     INTCONbits.TMR0IE = 1;
-    T0CON = 0B11000111;
-    TMR0L = 5;
+
+    T0CON = 0B11000110;
+
+    TMR0L = 7;
 
     TRISD = 0b00000000;
     TRISE = 0b00000000;
@@ -6014,6 +6016,8 @@ while(1) {
 
         imprime_lcd(temperature);
         imprime_lcd(" Graus Celsius");
+        _delay((unsigned long)((500)*(4000000/4000.0)));
+        alarmeTemperatura();
  }
 
     return;
